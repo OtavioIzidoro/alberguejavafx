@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="TXTNOVA" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="navegacao.Janela2">
+   <children>
+      <MenuBar layoutX="-3.0" layoutY="2.0" prefHeight="30.0" prefWidth="1375.0" AnchorPane.bottomAnchor="736.0" AnchorPane.leftAnchor="-3.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="2.0">
+        <menus>
+            <Menu mnemonicParsing="false" text="OPÇOES">
+               <items>
+                  <MenuItem fx:id="btMenu" mnemonicParsing="false" onAction="#btMenuClick" text="INICIO" />
+                  <MenuItem fx:id="btNovaReserva1" mnemonicParsing="false" onAction="#btNovaReservaClick" text="NOVA RESREVA" />
+                  <MenuItem fx:id="btCadastrarQuarto1" mnemonicParsing="false" onAction="#btCadastrarQuartoClick" text="CADASTRAR QUARTO" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <Text layoutX="512.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOVA RESERVA" textAlignment="CENTER" wrappingWidth="345.568359375">
+         <font>
+            <Font name="MV Boli" size="38.0" />
+         </font>
+      </Text>
+      <TextField fx:id="NOME" layoutX="332.0" layoutY="108.0" prefHeight="25.0" prefWidth="705.0" promptText="NOME:">
+         <font>
+            <Font name="MV Boli" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="DDD" layoutX="334.0" layoutY="182.0" prefHeight="25.0" prefWidth="51.0" promptText="DDD:">
+         <font>
+            <Font name="MV Boli" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="telefone" layoutX="414.0" layoutY="182.0" prefHeight="25.0" prefWidth="210.0" promptText="TELEFONE:">
+         <font>
+            <Font name="MV Boli" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="endereço" layoutX="332.0" layoutY="144.0" prefHeight="25.0" prefWidth="705.0" promptText="ENDEREÇO">
+         <font>
+            <Font name="MV Boli" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="email" layoutX="334.0" layoutY="220.0" prefHeight="25.0" prefWidth="699.0" promptText="EMAIL:">
+         <font>
+            <Font name="MV Boli" size="12.0" />
+         </font></TextField>
+      <DatePicker fx:id="datinicio" layoutX="373.0" layoutY="274.0" promptText="DATA INICIO" />
+      <DatePicker fx:id="datsaida" layoutX="818.0" layoutY="274.0" promptText="DATA SAIDA" />
+      <RadioButton layoutX="822.0" layoutY="576.0" mnemonicParsing="false" selected="true" text="CREDITO" textAlignment="CENTER">
+         <toggleGroup>
+            <ToggleGroup fx:id="pagamento" />
+         </toggleGroup>
+         <font>
+            <Font name="MV Boli" size="12.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="645.0" layoutY="554.0" mnemonicParsing="false" selected="true" text="DEBITO" toggleGroup="$pagamento">
+         <font>
+            <Font name="MV Boli" size="12.0" />
+         </font></RadioButton>
+      <RadioButton layoutX="443.0" layoutY="532.0" mnemonicParsing="false" selected="true" text="DINHEIRO" toggleGroup="$pagamento">
+         <font>
+            <Font name="MV Boli" size="12.0" />
+         </font></RadioButton>
+      <RadioButton layoutX="818.0" layoutY="428.0" mnemonicParsing="false" selected="true" text="SOLTEIRO">
+         <toggleGroup>
+            <ToggleGroup fx:id="tipo" />
+         </toggleGroup>
+         <font>
+            <Font name="MV Boli" size="12.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="642.0" layoutY="406.0" mnemonicParsing="false" selected="true" text="STANDART" toggleGroup="$tipo">
+         <font>
+            <Font name="MV Boli" size="12.0" />
+         </font></RadioButton>
+      <RadioButton layoutX="443.0" layoutY="384.0" mnemonicParsing="false" selected="true" text="SUITE  EXECUTIVA" toggleGroup="$tipo">
+         <font>
+            <Font name="MV Boli" size="12.0" />
+         </font></RadioButton>
+      <Text layoutX="595.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIPO QUARTO:">
+         <font>
+            <Font name="MV Boli" size="24.0" />
+         </font></Text>
+      <Text layoutX="526.0" layoutY="499.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FORMAS DE PAGAMENTO:" textAlignment="CENTER">
+         <font>
+            <Font name="MV Boli" size="24.0" />
+         </font></Text>
+      <Button fx:id="SALVAR" layoutX="654.0" layoutY="634.0" mnemonicParsing="false" onAction="#btSalvarClick" text="SALVAR" textAlignment="CENTER">
+         <font>
+            <Font name="MV Boli" size="12.0" />
+         </font></Button>
+      <Label fx:id="saltxt" layoutX="383.0" layoutY="673.0" prefHeight="54.0" prefWidth="714.0" textAlignment="CENTER" textFill="#2aff05">
+         <font>
+            <Font name="MV Boli" size="31.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="601.0" prefWidth="759.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="navegacao.Janela1">
+    <children>
+        <Label fx:id="label" layoutX="442.0" layoutY="347.0" minHeight="16" minWidth="69" prefHeight="54.0" prefWidth="567.0" text="ALBERGUE SPARKING WATER" textAlignment="CENTER">
+         <font>
+            <Font name="MV Boli" size="30.0" />
+         </font></Label>
+      <MenuBar layoutY="2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+            <Menu mnemonicParsing="false" text="OPÇÕES">
+               <items>
+                  <MenuItem fx:id="btMenu" mnemonicParsing="false" onAction="#btMenuClick" text="INICIO" />
+                  <MenuItem fx:id="btNovaReserva1" mnemonicParsing="false" onAction="#btNovaReservaClick" text="NOVA RESERVA" />
+                  <MenuItem fx:id="btCadastrarQuarto1" mnemonicParsing="false" onAction="#btCadastrarQuartoClick" text="CADASTRAR QUARTO" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+    </children>
+</AnchorPane>

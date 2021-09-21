@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="navegacao.Janela3">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="1366.0">
+        <menus>
+            <Menu mnemonicParsing="false" text="OPÇÕES">
+               <items>
+                  <MenuItem fx:id="btMenu" mnemonicParsing="false" onAction="#btMenuClick" text="INICIO" />
+                  <MenuItem fx:id="btNovaReserva" mnemonicParsing="false" onAction="#btNovaReservaClick" text="NOVA RESERVA" />
+                  <MenuItem fx:id="btCadastrarQuarto" mnemonicParsing="false" onAction="#btCadastrarQuartoClick" text="CADASTRAR QUARTO" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <Text layoutX="437.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CADASTRAR QUARTO" textAlignment="CENTER">
+         <font>
+            <Font name="MV Boli" size="48.0" />
+         </font>
+      </Text>
+      <TextField fx:id="NOME" layoutX="354.0" layoutY="152.0" prefHeight="25.0" prefWidth="676.0" promptText="NOME:">
+         <font>
+            <Font name="MV Boli" size="12.0" />
+         </font>
+      </TextField>
+      <Text fx:id="TIPOTXT" layoutX="560.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIPO DE QUARTO:" textAlignment="CENTER">
+         <font>
+            <Font name="MV Boli" size="27.0" />
+         </font>
+      </Text>
+      <RadioButton layoutX="468.0" layoutY="268.0" mnemonicParsing="false" selected="true" text="SOLTEIRO">
+         <font>
+            <Font name="MV Boli" size="12.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="TIPO" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="805.0" layoutY="312.0" mnemonicParsing="false" selected="true" text="SUITE EXECUTIVA" toggleGroup="$TIPO">
+         <font>
+            <Font name="MV Boli" size="12.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="639.0" layoutY="290.0" mnemonicParsing="false" selected="true" text="STANDART" toggleGroup="$TIPO">
+         <font>
+            <Font name="MV Boli" size="12.0" />
+         </font>
+      </RadioButton>
+      <TextField fx:id="DIME" layoutX="354.0" layoutY="369.0" prefHeight="25.0" prefWidth="676.0" promptText="DIMENSÕES:">
+         <font>
+            <Font name="MV Boli" size="12.0" />
+         </font>
+      </TextField>
+      <TextArea fx:id="DESC" layoutX="548.0" layoutY="422.0" prefHeight="200.0" prefWidth="482.0" promptText="DESCRIÇÃO:">
+         <font>
+            <Font name="MV Boli" size="12.0" />
+         </font>
+      </TextArea>
+      <Button fx:id="btSalvar" layoutX="651.0" layoutY="641.0" mnemonicParsing="false" onAction="#btSalvarClick" text="SALVAR">
+         <font>
+            <Font name="MV Boli" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="label" layoutX="458.0" layoutY="682.0" prefHeight="47.0" prefWidth="536.0" textFill="#00ff33">
+         <font>
+            <Font name="MV Boli" size="27.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
